@@ -1,9 +1,11 @@
 import React from 'react'
 import { AppContent, AppSidebar, AppFooter, AppHeader,AppUserSideBar } from '../components/index'
 import  { Component } from "react";
+import Login from '../views/pages/login/Login';
 
-class DefaultLayout  extends Component  {
-  render() {
+//class DefaultLayout  extends Component  {
+  const DefaultLayout=(props)=>{
+ // render() {
     const role =localStorage.getItem("role");
   return ( 
     (role == "Admin") ?
@@ -20,7 +22,7 @@ class DefaultLayout  extends Component  {
       </>   
     )
      :
-     (
+     ( (role == "User") ?(
      <>       
      <AppUserSideBar/>
      <div className="wrapper d-flex flex-column min-vh-100 bg-light">
@@ -29,11 +31,16 @@ class DefaultLayout  extends Component  {
           <AppContent />
         </div>
         <AppFooter />
-      </div>
+      </div>   
       </>       
-  ) 
+  ) :
+  ( 
+    <>
+     <Login {...props} />)
+     </>
   )
-}
+     ))
+//}
 }
 
 export default DefaultLayout;

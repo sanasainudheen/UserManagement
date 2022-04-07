@@ -1,0 +1,32 @@
+.CreateUser {
+    width: 75%;   
+    justify-content: space-between;
+    flex: 4;
+    background-color:lightgray;
+    padding: 30px;  
+    border-radius: 10px;
+    border-color: rgb(179, 11, 11);   
+    text-align: left; 
+  
+  }
+  .myDiv {
+  border: black;
+  text-align: left;
+  color :red;
+}
+.highlight{
+  color :red;
+  text-align: center;
+}
+.date-picker-wrapper {
+  display: flex !important;
+  flex-direction: column !important;
+}
+.marginTop{
+  margin-top: 25px;
+}
+.label-style {
+  float: left;
+}
+
+
